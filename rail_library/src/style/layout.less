@@ -1,0 +1,104 @@
+.wraper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .el-header {
+    width: 100%;
+    height: 50px;
+    background: #0091ff;
+    text-align: center;
+    line-height: 50px;
+  }
+  .closeAsideWidth {
+    width: 0px !important;
+  }
+  .closeAside_slider {
+    left: 0px !important;
+  }
+  .datac-aside_slider {
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+    top: 45%;
+    left: 250px;
+    width: 12px;
+    height: 168px;
+    margin-top: -34px;
+    border-radius: 0 12px 12px 0;
+    background-color: #000d2f;
+    text-align: center;
+    z-index: 1201;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 5px;
+      width: 2px;
+      height: 120px;
+      background-color: #fff;
+    }
+  }
+  .aside {
+    transition: all 0.6s ease-in-out;
+    height: 100vh;
+    background: #000d2f;
+    z-index: 1200;
+    position: relative;
+    overflow: hidden;
+    .aside-header {
+      color: #fff;
+    }
+  }
+  .el-main {
+    width: 100%;
+    height: calc(100vh - 110px);
+    background: rgba(240, 240, 240, 0.9);
+    padding: 24px;
+    z-index: 1000;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 12px; /*高宽分别对应横竖滚动条的尺寸*/
+      height: 4px;
+      scrollbar-arrow-color: red;
+    }
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 10px; /*滑块的圆角*/
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+      scrollbar-arrow-color: red;
+    }
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+  .el-footer {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background: #eaeaea;
+    text-align: center;
+    bottom: 0;
+    text-align: center;
+    line-height: 30px;
+    background: #eaeaea;
+  }
+  .page-name-wrap {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    line-height: 50px;
+    padding: 0 24px;
+    color: #0091ff;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+}
