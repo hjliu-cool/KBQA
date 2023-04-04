@@ -94,7 +94,7 @@
           <el-dropdown @command="handleCommand">
             <div class="user-info">
               <span class="avatar"></span>
-              <span class="name">Dull<i class="el-icon-caret-bottom el-icon--right"></i></span>
+              <span class="name">CBC<i class="el-icon-caret-bottom el-icon--right"></i></span>
             </div>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="exit">退出</el-dropdown-item>
@@ -103,8 +103,9 @@
         </div>
         <div class="layout-content">
           <router-view></router-view>
+          <management></management>
           <div class="layout-copy">
-            2015-2017 &copy; Dull
+            2022-2023 &copy; Dull
           </div>
         </div>
       </el-col>
@@ -114,6 +115,7 @@
 
 <script>
   import myMenu from 'common/Menu'
+  import management from 'page/Management'
   import util from '../../assets/js/util'
   export default {
     data() {
@@ -138,7 +140,8 @@
       }
     },
     components: {
-      myMenu
+      myMenu,
+      management
     },
     methods: {
       handleCommand(command) {
